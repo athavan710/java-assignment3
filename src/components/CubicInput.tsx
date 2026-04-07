@@ -10,7 +10,7 @@ type InputProps = {
     onSave: () => void;
 };
 
-export default function CubicInput({a, b, c, d, setA, setB, setC, setD, onSave}: InputProps) {
+export default function CubicInput({ a, b, c, d, setA, setB, setC, setD, onSave }: InputProps) {
     return (
         <div className="bg-white p-6 rounded-xl shadow-md border border-slate-200 grid grid-cols-2 md:grid-cols-5 gap-4 items-end">
             <div>
@@ -29,7 +29,9 @@ export default function CubicInput({a, b, c, d, setA, setB, setC, setD, onSave}:
                 <label className="block text-xs font-bold text-slate-500 mb-1">d value: </label>
                 <input type="number" value={d} onChange={(e) => setD(Number(e.target.value))} className="w-full p-2 border rounded" />
             </div>
-            <button onClick={onSave} className="bg-orange-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-600 transition-colors">
+            <button
+                onClick={onSave}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-xl transition-colors shadow-lg shadow-blue-100">
                 Save
             </button>
         </div>
