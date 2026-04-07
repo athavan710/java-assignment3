@@ -7,7 +7,7 @@ type EquationProps = {
 
 export default function CubicEquation({ a, b, c, d }: EquationProps) {
   return (
-    <h2 className="text-xl font-bold text-center">
+    <h2 className="text-xl font-bold text-center text-black mb-4" style={{ color: '#000000', opacity: 1 }}>
       f(x) = {a}x³{" "}
       {b >= 0 ? `+ ${b}` : `- ${Math.abs(b)}`}x²{" "}
       {c >= 0 ? `+ ${c}` : `- ${Math.abs(c)}`}x{" "}

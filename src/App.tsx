@@ -28,6 +28,7 @@ function App() {
     setHistory([...history, { a, b, c, d }])
   };
 
+
   return (
     <div className="dashboard-wrapper">
       <h1 className="main-title">Cubic Solver</h1>
@@ -40,36 +41,30 @@ function App() {
         />
       </div>
 
-      <div className="equation-display">
-        <CubicEquation a={a} b={b} c={c} d={d} />
-      </div>
+
 
       <div className="main-grid">
-
-
         <div className="grid-side card results-container">
-          <CubicTable a={a} b={b} c={c} d={d} onRootsCalculated={function (r1: number | string, r2: number | string, r3: number | string): void {
+          <CubicTable a={a} b={b} c={c} d={d} onRootsCalculated={(r1, r2, r3) => {
             setRoot1(r1);
             setRoot2(r2);
             setRoot3(r3);
-          } }  />
+          }} />
         </div>
 
 
         <div className="grid-center card">
+          <CubicEquation a={a} b={b} c={c} d={d} />
           <CubicGraph a={a} b={b} c={c} d={d} root1={root1} root2={root2} root3={root3} />
         </div>
-
 
         <div className="grid-side card history-container">
           <h3 className="sidebar-header"></h3>
           <CubicHistory history={history} />
         </div>
-
       </div>
     </div>
-  )
-
+  );
 };
 
 export default App
