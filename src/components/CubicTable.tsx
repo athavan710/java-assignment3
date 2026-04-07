@@ -61,10 +61,10 @@ export default function CubicTable({ a, b, c, d, onRootsCalculated }: TableProps
 
     useEffect(() => {
         onRootsCalculated(root1, root2, root3);
-    }, [root1, root2, root3, onRootsCalculated]);
+    }, [root1, root2, root3, onRootsCalculated]); //calculate roots and onrootscalculated sends to graph
 
     const formatValue = (val: number | string) =>
-        typeof val === 'number' ? val.toFixed(2) : val;
+        typeof val === 'number' ? val.toFixed(2) : val; //number to 2 decimal places or string
 
     return (
         <div className="w-full">
@@ -90,17 +90,17 @@ export default function CubicTable({ a, b, c, d, onRootsCalculated }: TableProps
                     </tr>
 
                     <tr className="border-b border-slate-100">
-                        <td className="py-2 px-4 text-slate-500 text-sm text-center">Root 1</td>
+                        <td className="py-2 px-4 text-slate-600 font-medium text-center">Root 1</td>
                         <td className="py-2 px-4 text-center">{formatValue(root1)}</td>
                         <td className="py-2 px-4 text-center">0.00</td>
                     </tr>
                     <tr className="border-b border-slate-100">
-                        <td className="py-2 px-4 text-slate-500 text-sm text-center">Root 2</td>
+                        <td className="py-2 px-4 text-slate-600 font-medium text-center">Root 2</td>
                         <td className="py-2 px-4 text-center">{formatValue(root2)}</td>
                         <td className="py-2 px-4 text-center">{typeof root2 === 'number' ? '0.00' : '—'}</td>
                     </tr>
                     <tr className="border-b border-slate-100">
-                        <td className="py-2 px-4 text-slate-500 text-sm text-center">Root 3</td>
+                        <td className="py-2 px-4 text-slate-600 font-medium text-center">Root 3</td>
                         <td className="py-2 px-4 text-center">{formatValue(root3)}</td>
                         <td className="py-2 px-4 text-center">{typeof root3 === 'number' ? '0.00' : '—'}</td>
                     </tr>

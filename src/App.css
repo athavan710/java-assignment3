@@ -1,10 +1,2 @@
 @import "tailwindcss";
 
-@layer base {
-  body {
-    /* This forces the background to be light slate and the text to be dark */
-    @apply bg-slate-100 text-slate-900;
-    margin: 0;
-    font-family: sans-serif;
-  }
-}

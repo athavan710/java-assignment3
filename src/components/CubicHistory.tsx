@@ -6,7 +6,7 @@ type CubicVariables = {
 };
 
 interface Props {
-  history: CubicVariables[];
+  history: CubicVariables[]; //array with saved equations
 }
 
 const CubicHistory = ({ history }: Props) => {
